@@ -1,0 +1,2 @@
+Welcome to our platform thanks for subscribing {{username}},
+we are glad to have you onboard

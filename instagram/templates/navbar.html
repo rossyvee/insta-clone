@@ -1,0 +1,47 @@
+
+
+<nav class="navbar navbar-expand-lg navbar-dark  text-dark" >
+    <div class="container-fluid">
+      <a style="font-size: 2em; color: black;font-family: 'Pacifico', cursive;" class="navbar-brand t" href="#"> <span style="color: black;"> Like</span><span style="color: orangered;">me</span><span style="color: blue;">U</span> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-dark" aria-current="page" href="{% url 'home'%}">Home</a>
+          </li>
+         
+         
+          
+        </ul>
+        {%if request.user.is_authenticated%}
+    <div class="" style="text-align: right;">
+      <p class="my-auto display-5 ml-3"><a class="m-3 fs-2 mr-3 text-dark  " href="{% url 'signout'%}">Logout<i class="fa-solid fa-arrow-right-to-bracket ms-4"></i></a></p>
+    </div>
+    {%else%}
+    <div class="d-flex justify-content-end px-5 " > 
+      <p class="my-auto "><a style="color: rgb(66, 26, 54);margin-right: 2vw;" class=" fs-2 text-" href="{% url 'signup'%}"> Register</a></p>
+      <p class="my-auto"><a class="" style="color: rgb(66, 26, 54);" href="{% url 'login'%}"><i class="fa-solid fa-arrow-right-from-bracket"></i>Login</a></p>
+    </div>
+    {%endif%}
+       
+      </div>
+    </div>
+  </nav>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    

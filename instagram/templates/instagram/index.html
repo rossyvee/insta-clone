@@ -58,11 +58,11 @@
                 </div>
                 <span class="ml-4 mb-1"><strong>{{image.likes.count}} like{{image.likes.count|pluralize}}</strong></span>
                 <span class="text-secondary ml-4 viewall"><a href="{% url 'comment' image.id %}">view all {{image.comments.count}} comment{{image.comments.count|pluralize}}</a></span>
-                <div class="allcomments mb-4">
+                <div class="allcomments mb-4 mt-3 " >
                     {% for comment in image.comments.all|slice:'2' %}
                     <div class="comment">
-                        <div class="ml-4"><strong>{{ comment.user.user.username }}</strong> <span
-                                class="text-secondary">{{ comment.comment }}</span>
+                        <div class="ml-4 p-1 border  rounded  " ><strong class="text-info">{{ comment.post.user.user.username }}</strong> <span
+                                class="text-dark">{{ comment.comment }}</span>
                         </div>
                     </div>
                     {% empty %}
@@ -72,31 +72,31 @@
             </div>
             {% endfor %}
         </div>
-        <div class="col-md-4 mt-4 userinfo order-first">
-            <div class=" text-center mx-auto  p-4 " style="">
+        <div class="col-md-4 mt-3 userinfo order-first">
+            <div class=" text-center mx-auto  p-3 " style="">
                 
-                <div class="col-md-3 ml-2 mx-auto">
+                <div class="  mx-auto">
                     <h6>Profile</h6>
-                    <img class="rounded-circle user-img" src="{{ user.profile.profile_picture.url }}" style="width: 100%;aspect-ratio: 1;clip-path: circle();">
+                    <img class="rounded-circle user-img" src="{{ user.profile.profile_picture.url }}" style="width: 50%;aspect-ratio: 1;clip-path: circle();">
                 </div>
-                <div class="col-md-4 mt-4 user-detail mx-auto">
+                <div class=" mt-2 user-detail mx-auto">
                     <span class=" text-secondary"><a
-                            href="{% url 'user_profile' user.username %}">{{ user.username }}</a></span> <br>
+                            href="{% url 'user_profile' user.username %}" class="">{{ user.username }}</a></span> <br>
                     <span class=" inname">{{ user.profile.name }}</span>
                 </div>
             </div>
 
 
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card mt-4 mr-2 ml-2">    
-                <div class="card-title text-dark mt-2 mr-2 ml-2 text-center " style="background-color: beige;color: maroon;font-weight: bolder;">People you may Know</div>
+            <div class="">
+                <div class="">
+                    <div class="card mt-4 mr-2 ml-2 mb-3 mx-auto">    
+                <div class="card-title text-dark  text-center p-1 " style="background-color: beige;color: maroon;font-weight: bolder;">People you may Know</div>
                         
                 
                 {% for user in users %}
                         <div class="container">
                             <div class="row">
-                                <div class="col-md-4 mr-3 mt-1 mb-2">
+                                <div class="col-md-4 mr-4 mt-1 mb-2">
                                     <img class="rounded-circle" src="{{ user.profile.profile_picture.url }}"
                                          width="45px" height="45px">
                                 </div>
@@ -112,7 +112,7 @@
                         {% endfor %}
                     </div>
                 </div>
-                <div class="col-md-2"></div>
+                
             </div>
 
 

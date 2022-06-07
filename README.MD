@@ -16,14 +16,16 @@ A social media app that allows users to create account, upload photos, update th
 * [Python3.6](https://www.python.org/)
 * [Django](https://www.djangoproject.com/)
 * [Heroku](https://heroku.com)
+* Postgres
+* Cloudinary
 ## Requirements
 * A stable internet connection
 ## User Story
-* View different photos that interest them
+* create an account and update profile
 * Click a single image to expand it and view the details of that photo
-* Copy a link to the photo to share with my friends.
-* Search for different categories
-* View photos based on the location they were taken.
+* Follow people and search for existing accounts
+* Like and comment on a post
+* Delete a post
 ## set up instruction and installation
 To get to this project
  1. clone this repository to a folder https://github.com/rossyvee/portfolio-website

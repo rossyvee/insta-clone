@@ -28,9 +28,8 @@ A social media app that allows users to create account, upload photos, update th
 * Delete a post
 ## set up instruction and installation
 To get to this project
- 1. clone this repository to a folder https://github.com/rossyvee/portfolio-website
+ 1. clone this repository to a folder 
  2. Extract the cloned file and install requirements
-* cd the folder then open the portfolio-website
 * pip install -r requirements.txt
   3. Export configurations
   4. python3 -m venv virtual --without-pip
@@ -44,7 +43,7 @@ pip install -r requirements.txt
 Set Up your database User,Password, Host then make migrate
 
 # Make migrations
-python manage.py makemigrations photogallery
+python manage.py makemigrations
 python manage.py migrate 
 
 # Run the application
@@ -52,7 +51,11 @@ python manage.py runserver
 Open the application on your browser 127.0.0.1:8000
 
 ## Bugs
-The uploading images is not showing the images properly
+There are no known bugs
+
+### Admin creds
+user:rose
+pass:pass123
   ## Licence
 MIT License
 Copyright (c) [2022] [Roseline Akinyi] 

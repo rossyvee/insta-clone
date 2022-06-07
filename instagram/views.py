@@ -26,7 +26,7 @@ def signup(request):
             username = form.cleaned_data.get('username')
             f_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=f_password)
-            send_email(username,user.email)
+            # send_email(username,user.email)
             login(request, user)
             return redirect('home')
     else:
@@ -65,7 +65,7 @@ def index(request):
         'users': users,
 
     }
-    return render(request, 'plata/index.html', context)
+    return render(request, 'instagram/index.html', context)
 
 
 
@@ -88,7 +88,7 @@ def profile(request, username):
         'images': images,
 
     }
-    return render(request, 'plata/profile.html', context)
+    return render(request, 'instagram/profile.html', context)
 
 
 @login_required(login_url='login')

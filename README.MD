@@ -1,6 +1,6 @@
-# Photo Gallery
+# Instagram Clone
+### ROSELINE AKINYI
 
-A personal photo gallery that allows users to upload images and share by copying the link
 ## Table of Content
 + [Description](#description)
 + [Installation Requirement]( Requisites)
@@ -11,7 +11,7 @@ A personal photo gallery that allows users to upload images and share by copying
 + [Authors Info](#aut)
 
 ## Description
-A personal photo gallery that allows users to upload images and share by copying the link
+A social media app that allows users to create account, upload photos, update their profile, like and comment on posts
 ## Technology Used
 * [Python3.6](https://www.python.org/)
 * [Django](https://www.djangoproject.com/)

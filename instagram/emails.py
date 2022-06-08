@@ -2,7 +2,7 @@ from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 
 def send_email(username,receiver):
-    subject='Welcome to LikemeU'
+    subject='Welcome to Instagram'
     mail_content=render_to_string('emails/welcome.html',{'username':username})
     alt_content=render_to_string('emails/welcome.txt',{'username':username})
     sender='michaelogaye87@gmail.com'

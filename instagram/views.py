@@ -112,7 +112,7 @@ def user_profile(request, username):
         'follow_status': follow_status
     }
     
-    return render(request, 'plata/user_profile.html', context)
+    return render(request, 'instagram/user_profile.html', context)
 
 
 def unfollow(request, to_unfollow):
@@ -143,10 +143,10 @@ def search_profile(request):
             'results': results,
             'message': message
         }
-        return render(request, 'plata/results.html', context)
+        return render(request, 'instagram/results.html', context)
     else:
         message = "You haven't searched for any image category"
-    return render(request, 'plata/results.html', {'message': message})
+    return render(request, 'instagram/results.html', {'message': message})
 
 
 
@@ -172,7 +172,7 @@ def post_comment(request, id):
         'is_liked': is_liked,
         'total_likes': image.total_likes()
     }
-    return render(request, 'plata/single_post.html', context)
+    return render(request, 'instagram/single_post.html', context)
 
 
 
@@ -193,7 +193,7 @@ def like_post(request):
         'total_likes': image.total_likes()
     }
     if request.is_ajax():
-        html = render_to_string('plata/like.html', context, request=request)
+        html = render_to_string('instagram/like.html', context, request=request)
         return JsonResponse({'form': html})
 
 class PostLikeToggle(RedirectView):
